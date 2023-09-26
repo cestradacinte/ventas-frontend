@@ -18,7 +18,7 @@ function Login() {
       localStorage.setItem("token", loginResponse.data.access);
       
       const userData = await getUserData(loginResponse.data.access);
-
+      localStorage.setItem("userData", JSON.stringify(userData));
       if(userData.is_superuser) {
         navigate('/home');
       } else {
