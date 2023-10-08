@@ -22,7 +22,7 @@ function Login() {
       if(userData.is_superuser) {
         navigate('/home');
       } else {
-        setError("No tienes permisos para ingresar");
+        navigate('/pedido')
       }
     } catch (error) {
       setError("Error al iniciar sesion");
